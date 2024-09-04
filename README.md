@@ -114,6 +114,14 @@ react-math-router-app/
 
 Here are some screenshots of the application:
 
+ {/* TODO 1: Add a new route to open the operation form */}
+           <Route  path="/:OperationForm" elementName={<OperationForm/>}/>
+            {/* TODO 2: Add a new route that opens the Result page */}
+            <Route  path="/:operations/:num1/:num2" elementName={<Result />}/>
+            {/* TODO BONUS 1: Add a new route to  make the homepage default to navigating to the addition operation form  */}
+            <Route path="/" element={<Navigate to="/addition" />} />
+            {/* TODO BONUS 2: Add a custom Page Not Found error */}
+            <Route path='*' element={<p><strong>404 Page Not Found</strong></p>} />
 ### 1. **Home Page (Addition Form)**
 
 ![Addition Form Screenshot](./addition.png)
